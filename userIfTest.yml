@@ -1,0 +1,11 @@
+#testユーザ作成
+---
+- hosts: localhost
+  vars:
+    username: test
+    userid: 201
+  tasks:
+    - name: Create user
+      user:
+        name: 
+        uid: "{{ userid }}"
