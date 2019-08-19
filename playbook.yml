@@ -1,4 +1,4 @@
-- hosts: localhost
+- hosts: test
   vars:
     sample_vars: software_desing_2018
   tasks:

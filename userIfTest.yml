@@ -1,9 +1,10 @@
 #testユーザ作成
 ---
-- hosts: localhost
+- hosts: test
   vars:
     username: test
     userid: 201
+
   tasks:
     - name: Create user
       user:
