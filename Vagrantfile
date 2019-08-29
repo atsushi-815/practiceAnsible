@@ -68,5 +68,5 @@ Vagrant.configure("2") do |config|
   # SHELL
   config.ssh.username = 'vagrant'
   config.ssh.password = 'vagrant'
-  config.ssh.insert_key = 'false'
+#  config.ssh.insert_key = 'false'
 end
