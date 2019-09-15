@@ -1,0 +1,13 @@
+---
+- hosts: test
+  
+  tasks:
+  - name: ansible変数合体
+    vars:
+      test: "{{ head + \"_\" + tail }}"
+    shell: echo "{{ test }}"
+    register: result
+
+  - name: 実行結果
+    debug:
+      msg: "{{ result }}"

@@ -1,0 +1,6 @@
+---
+- tasks:
+  name: ansible変数合体
+  command: echo "{{ head + \"_\" + tail }}"
+  register: result
+
