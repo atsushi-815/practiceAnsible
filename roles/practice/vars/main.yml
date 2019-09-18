@@ -1,5 +1,8 @@
-
-an_sible:
+test: aaa
+ansible:
   - head: an
+
+gyonsible:
   - tail: sible
 
+an_sible: test_success
