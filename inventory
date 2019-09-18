@@ -1,7 +1,7 @@
 [test]
 test1 ansible_host=192.168.11.10 ansible_ssh_user=vagrant
 
-[test:vars]
-head=an
-tail=sible
-an_sible=ansible!!
+#[test:vars]
+#head=an
+#tail=sible
+#an_sible=ansible!!

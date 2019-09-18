@@ -1,0 +1,9 @@
+---
+
+- name: ansible変数合体
+  command: echo "{{ an_sible[head + \"_\" + tail] }}"
+  register: result
+
+- name: 変数出力結果
+  debug:
+    msg: "{{ result }}"
