@@ -1,0 +1,8 @@
+test: aaa
+head: an
+tail: sible
+
+
+ansible:
+  an_sible: success!!!
+  aaa_sible: test!!!

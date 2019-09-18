@@ -1,9 +1,0 @@
----
-- name: ansible変数合体
-  debug:
-    msg: "{{ ansible.head + gyonsible.tail }}"
-  register: result
-
-- name: 変数出力結果
-  debug:
-    msg: "{{ result }}"

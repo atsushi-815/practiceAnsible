@@ -1,0 +1,10 @@
+---
+- name: ansible変数合体
+  debug:
+    msg: "{{ ansible[head + \"_\" + tail] }}"
+
+
+- name: ansible変数合体2
+  debug:
+    msg: "{{ ansible[test + \"_\" + tail] }}"
+
