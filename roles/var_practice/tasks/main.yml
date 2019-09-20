@@ -1,0 +1,5 @@
+---
+- name: ansible変数合体
+  debug:
+    msg: "{{ ansible[head + tail] }}"
+
