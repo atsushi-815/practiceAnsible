@@ -70,3 +70,6 @@ Vagrant.configure("2") do |config|
   config.ssh.password = 'vagrant'
   config.ssh.insert_key = 'false'
 end
+
+
+  # vagrantupしたら、$ ssh-copy-id vagrant@192.168.11.10を実行しておく

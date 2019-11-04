@@ -1,12 +1,21 @@
-- hosts: test
-  vars:
-    sample_vars: software_desing_2018
+- hosts: vagrants
   tasks:
-    - shell: uptime
-      register: result
+    - name: 末尾に文字を複数行追加
+      lineinfile:
+        dest: /tmp/test.txt
+        line: "{{ item }}"
+      with_items:
+        - "aaa"
+        - "bbb"
 
-    - debug:
-        msg: "{{ result.stdout }}"
 
-    - debug:
-        msg: "{{ sample_vars }}"
+#  vars:
+#    sample_vars: software_desing_2018
+#    - shell: uptime
+#      register: result
+#
+#    - debug:
+#        msg: "{{ result.stdout }}"
+#
+#    - debug:
+#        msg: "{{ sample_vars }}"
