@@ -9,6 +9,9 @@
         - "bbb"
 
 
+    - name: エラー実験
+      shell: "sh /tmp/test.sh"
+
 #  vars:
 #    sample_vars: software_desing_2018
 #    - shell: uptime
