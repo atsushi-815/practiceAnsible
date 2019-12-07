@@ -1,16 +1,29 @@
 - hosts: vagrants
   tasks:
-    - name: 末尾に文字を複数行追加
-      lineinfile:
-        dest: /tmp/test.txt
-        line: "{{ item }}"
-      with_items:
-        - "aaa"
-        - "bbb"
+    - name: yumモジュールチェック
+      shell: rpm -qa | grep yum | wc -l
+      args:
+        warn: false
+      register: yum_check
+      ignore_errors: true
+
+    - name: コマンド実行結果チェック1
+      debug:
+        msg: "yumモジュールの数は{{ yum_check.stdout }}です"
+      when: yum_check.stdout == '1'
+
+    - name: コマンド実行結果チェック3
+      debug:
+        msg: "yumモジュールの数は{{ yum_check.stdout }}です"
+      when: yum_check.stdout == '3'
 
 
-    - name: エラー実験
-      shell: "sh /tmp/test.sh"
+#    - name: 実行結果
+#      debug:
+#        msg: "{{ yum_check }}"
+
+
+
 
 #  vars:
 #    sample_vars: software_desing_2018
